@@ -187,6 +187,7 @@ section h2 {
   color: var(--color-dbrown);
   font-family: var(--font-serif);
   font-size: 40px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -196,14 +197,23 @@ section .text-container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   gap: 1em;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 section .text-container .text-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 220px 1fr;
+  -ms-grid-columns: 1fr;
+  grid-template: 220px 1fr / 1fr;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   margin: 20px;
   min-height: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   border-radius: 10px;
   background: var(--color-brown);
   color: var(--color-pink);
@@ -213,7 +223,7 @@ section .text-container .text-box img {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 40%;
+  height: 100%;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -224,11 +234,16 @@ section .text-container .text-box h3 {
   margin-bottom: 10px;
 }
 
+#about {
+  grid-template: revert;
+}
+
 .about-info {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr;
   grid-template-columns: 1fr 2fr;
+  max-width: 800px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -249,19 +264,15 @@ section .text-container .text-box h3 {
   font-family: var(--font-mono);
 }
 
-.text-box {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 .work-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr fit-content(50px) 50px;
+  -ms-grid-columns: 1fr;
+  grid-template: 1fr fit-content(50px) 50px / 1fr;
+  justify-items: center;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -270,13 +281,29 @@ section .text-container .text-box h3 {
   padding: 20px;
 }
 
+.info-code {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  text-align: center;
+}
+
 .work-link {
   font-family: var(--font-mono);
-  color: var(--color-dbrown);
+  color: var(--color-lbrown);
+  background-color: var(--color-dbrown);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
 }
 
 .work-link:hover {
-  text-decoration: underline;
+  background-color: var(--color-lbrown);
+  color: var(--color-dbrown);
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .info-stack {
@@ -289,6 +316,16 @@ section .text-container .text-box h3 {
 .tooltip {
   position: relative;
   display: inline-block;
+}
+
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .contact-link {
@@ -374,9 +411,10 @@ section .text-container .text-box h3 {
 
 @media screen and (max-width: 700px) {
   .sidenav {
+    position: fixed;
+    padding-bottom: 20px;
     width: 100%;
     height: auto;
-    position: relative;
     text-align: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -390,6 +428,7 @@ section .text-container .text-box h3 {
     justify-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
+    background-color: rgba(253, 232, 218, 0.9);
   }
   .sidenav a {
     float: center;
@@ -409,16 +448,23 @@ section .text-container .text-box h3 {
     -ms-grid-row-align: center;
     align-self: center;
   }
+  .sidenav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
   .nav-line {
     display: none;
   }
   .nav-socials {
     display: none;
-  }
-  #home {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
   }
   .skills-title {
     text-align: left;
