@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/favicon.ico" />
     <title>Christa Westerink's Portfolio</title>
-    <link rel="stylesheet" href="./css/styles.production.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <script
       src="https://kit.fontawesome.com/eb1a8fc015.js"
       crossorigin="anonymous"
@@ -63,8 +63,7 @@
       <div class="container reveal">
         <h2>About</h2>
         <div class="text-container">
-          <div class="text-box">
-            <h3></h3>
+          <div class="text-box" id="about">
             <div class="about-info">
               <img class="about-img" src="https://i.imgur.com/3T0PYTx.jpg" />
               <p>
@@ -107,17 +106,21 @@
                   Meet App is a serverless, progressive web application (PWA)
                   built with React using a test-driven development (TDD)
                   technique. The application uses the Google Calendar API to
-                  fetch upcoming events.<br /><br />
-                  <a
-                    class="work-link"
-                    href="https://github.com/cjwe/meet"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View code on GitHub
-                  </a>
+                  fetch upcoming events.
                 </p>
               </div>
+
+              <div class="info-code">
+                <a
+                  class="work-link"
+                  href="https://github.com/cjwe/meet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code on GitHub
+                </a>
+              </div>
+
               <div class="info-stack">
                 <div class="tooltip">
                   <i class="fa-brands fa-html5"></i>
@@ -162,17 +165,21 @@
                   This API is the server-side component of a movies web
                   application, myGhibli. The web application provides users with
                   access to information about different movies, the director,
-                  and genres. <br /><br />
-                  <a
-                    class="work-link"
-                    href="https://github.com/cjwe/myFlix-api"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View code on GitHub
-                  </a>
+                  and genres.
                 </p>
               </div>
+
+              <div class="info-code">
+                <a
+                  class="work-link"
+                  href="https://github.com/cjwe/myFlix-api"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code on GitHub
+                </a>
+              </div>
+
               <div class="info-stack">
                 <div class="tooltip">
                   <i class="fa-brands fa-html5"></i>
@@ -215,26 +222,29 @@
                   This single-page, responsive application (SPA) is the
                   client-side for an application called myGhibli based on its
                   existing server-side code (REST API and database).
-                  <br /><br />
-                  <a
-                    class="work-link"
-                    href="https://github.com/cjwe/myFlix-client"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View code on GitHub
-                  </a>
-                  <br />
-                  <a
-                    class="work-link"
-                    href="https://i.imgur.com/6o3euip.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View case study
-                  </a>
                 </p>
               </div>
+
+              <div class="info-code">
+                <a
+                  class="work-link"
+                  href="https://github.com/cjwe/myFlix-client"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code on GitHub
+                </a>
+                <br />
+                <a
+                  class="work-link"
+                  href="https://i.imgur.com/6o3euip.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View case study
+                </a>
+              </div>
+
               <div class="info-stack">
                 <div class="tooltip">
                   <i class="fa-brands fa-html5"></i>
@@ -279,17 +289,21 @@
                 <h3>Angular Movie App</h3>
                 <p>
                   Utilizing the same movie API as with the React myGhibli app,
-                  this SPA is built with Angular. <br /><br />
-                  <a
-                    class="work-link"
-                    href="https://github.com/cjwe/myFlix-Angular-client"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View code on GitHub
-                  </a>
+                  this SPA is built with Angular.
                 </p>
               </div>
+
+              <div class="info-code">
+                <a
+                  class="work-link"
+                  href="https://github.com/cjwe/myFlix-Angular-client"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code on GitHub
+                </a>
+              </div>
+
               <div class="info-stack">
                 <div class="tooltip">
                   <i class="fa-brands fa-html5"></i>
@@ -327,17 +341,21 @@
                 <p>
                   Chat App was built for mobile devices using React Native. The
                   app provides users with a chat interface and options to share
-                  images and their location.<br /><br />
-                  <a
-                    class="work-link"
-                    href="https://github.com/cjwe/chat-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View code on GitHub
-                  </a>
+                  images and their location.
                 </p>
               </div>
+
+              <div class="info-code">
+                <a
+                  class="work-link"
+                  href="https://github.com/cjwe/chat-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code on GitHub
+                </a>
+              </div>
+
               <div class="info-stack">
                 <div class="tooltip">
                   <i class="fa-brands fa-js"></i>
@@ -371,16 +389,19 @@
                 <p>
                   This Pokédex is a web application built with HTML, CSS, and
                   primarily JavaScript, which loads data from an external API
-                  and enables the viewing of that data in detail.<br /><br />
-                  <a
-                    class="work-link"
-                    href="https://github.com/cjwe/pokedex-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View code on GitHub
-                  </a>
+                  and enables the viewing of that data in detail.
                 </p>
+              </div>
+
+              <div class="info-code">
+                <a
+                  class="work-link"
+                  href="https://github.com/cjwe/pokedex-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code on GitHub
+                </a>
               </div>
               <div class="info-stack">
                 <div class="tooltip">
@@ -414,9 +435,8 @@
       <div class="container reveal">
         <h2>Contact</h2>
         <div class="text-container">
-          <div class="text-box">
+          <div class="text-box" id="contact">
             <p>Have an enquiry? Let's connect.</p>
-            <br />
             <p>
               Email
               <a
